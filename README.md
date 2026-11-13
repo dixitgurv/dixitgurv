@@ -6,14 +6,14 @@ Most of my day job is private, so this profile holds small, complete projects in
 
 #### Projects
 
-**[lora-eval-gate](https://github.com/dixitgurv/lora-eval-gate)**: LoRA fine-tune of Qwen2.5-0.5B for text-to-SQL, plus the evaluation harness and promotion gate that decide whether it may replace the base model. Execution-based scoring on synthetic databases, an exact McNemar test on paired outcomes, and per-category regression checks. The gate runs in CI. Result: 40.8% → 80.0% execution accuracy on a 400-example held-out set, with an honest breakdown of where the gain comes from.
-`Python` `PyTorch` `PEFT` `transformers` `SQLite`
-
-**[pg-perf-mcp](https://github.com/dixitgurv/pg-perf-mcp)**: An MCP server that lets an AI agent diagnose PostgreSQL performance. It reads EXPLAIN ANALYZE plans and flags misestimates, disk sorts, unindexed join keys and wasted scans, and it also reports slow queries, unused indexes and table bloat. Read-only by design, enforced at the session level as well as by query checks. On the demo database, its findings take a join from 34 ms to 0.7 ms.
-`Python` `MCP` `PostgreSQL` `psycopg`
+**[pg-perf-mcp-spring](https://github.com/dixitgurv/pg-perf-mcp-spring)**: An MCP server in Spring Boot 4 and Spring AI that lets an AI agent diagnose PostgreSQL performance like a DBA. Eight plan-analysis rules read EXPLAIN ANALYZE output and flag misestimates, disk sorts, unindexed foreign keys and wasted scans, each with the fix written out. Read-only in four layers, down to the Postgres session. Tested on PostgreSQL 17 with Testcontainers, and end to end by driving the packaged jar with the MCP Java client. On the demo database, its findings take a join from 30.8 ms to 0.15 ms. (Also in [Python](https://github.com/dixitgurv/pg-perf-mcp).)
+`Java` `Spring Boot 4` `Spring AI` `MCP` `PostgreSQL` `Testcontainers`
 
 **[springboot4-jackson3-demo](https://github.com/dixitgurv/springboot4-jackson3-demo)**: Every Jackson 2 → 3 behaviour change that can break a running Spring Boot service, each pinned by a test, with a migration checklist. Includes the one that turns yesterday's valid requests into 400s.
 `Java` `Spring Boot 4` `Jackson 3` `JUnit`
+
+**[lora-eval-gate](https://github.com/dixitgurv/lora-eval-gate)**: LoRA fine-tune of Qwen2.5-0.5B for text-to-SQL, plus the evaluation harness and promotion gate that decide whether it may replace the base model. Execution-based scoring on synthetic databases, an exact McNemar test on paired outcomes, and per-category regression checks. The gate runs in CI. Result: 40.8% → 80.0% execution accuracy on a 400-example held-out set, with an honest breakdown of where the gain comes from.
+`Python` `PyTorch` `PEFT` `transformers` `SQLite`
 
 #### What I work on
 
